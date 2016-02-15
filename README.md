@@ -2,4 +2,4 @@ Get Started:
 ============
 
 npm install
-gulp
+npm run dev
