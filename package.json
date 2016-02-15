@@ -40,6 +40,6 @@
     "watch:react": "nodemon -q -w src/react -e js --exec npm run build:react",
     "watch:css": "nodemon -q -w src/scss -e scss --exec npm run build:css",
     "serve": "live-server --port=8080 app/",
-    "dev": "npm run build && parallelshell 'npm run watch:js' 'npm run watch:react' 'npm run watch:html' 'npm run watch:css' 'npm run serve'"
+    "dev": "npm run build && parallelshell \"npm run watch:js\" \"npm run watch:react\" \"npm run watch:html\" \"npm run watch:css\" \"npm run serve\""
   }
 }
