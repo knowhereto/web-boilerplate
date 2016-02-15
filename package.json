@@ -16,7 +16,6 @@
     "panini": "^1.2.0",
     "parallelshell": "^2.0.0",
     "rimraf": "^2.5.1",
-    "run-sequence": "^1.1.5",
     "vinyl-fs": "^2.3.1"
   },
   "dependencies": {
@@ -36,10 +35,10 @@
     "build:html": "node ./scripts/panini.js",
     "build:react": "mkdirp app/js && browserify -t babelify src/react/react.js -o app/js/react.js",
     "build": "npm run build:css & npm run build:html & npm run build:js & npm run build:react",
-    "watch:html": "nodemon -q -w src/ -e html --exec 'npm run build:html'",
-    "watch:js": "nodemon -q -w src/js -e js --exec 'npm run build:js'",
-    "watch:react": "nodemon -q -w src/react -e js --exec 'npm run build:react'",
-    "watch:css": "nodemon -q -w src/scss -e scss --exec 'npm run build:css'",
+    "watch:html": "nodemon -q -w src/ -e html --exec npm run build:html",
+    "watch:js": "nodemon -q -w src/js -e js --exec npm run build:js",
+    "watch:react": "nodemon -q -w src/react -e js --exec npm run build:react",
+    "watch:css": "nodemon -q -w src/scss -e scss --exec npm run build:css",
     "serve": "live-server --port=8080 app/",
     "dev": "npm run build && parallelshell 'npm run watch:js' 'npm run watch:react' 'npm run watch:html' 'npm run watch:css' 'npm run serve'"
   }
